@@ -1,0 +1,389 @@
+﻿# A5:ER FORMAT:17
+# A5:ER ENCODING:UTF8
+# A5:ER Mk-1 Copyright © 2007 m.matsubara
+# A5:SQL Mk-2 Version 2.18.2 Copyright © 1997 - 2023 m.matsubara
+#  https://a5m2.mmatsubara.com
+
+[Manager]
+ProjectName=
+Author=
+MaxEntityRowShow=1000
+ReadOnlyRecommend=0
+Page=Main
+PageInfo="Main",2,"A3Landscape",$FFFFFF
+LogicalView=1
+DecodeDomain=0
+ViewModePageIndividually=1
+ViewMode=2
+ViewFormat=0
+UseNondependenceDashLine=0
+FontName=Tahoma
+FontSize=12
+PaperSize=A4Landscape
+HeaderLeft=
+HeaderCenter=
+HeaderRight=
+FooterLeft=
+FooterCenter=
+FooterRight=
+ShowPageoutRelation=1
+RDBMSType=6
+RDBMSTypeName=MySQL
+GenerateComment=0
+DefaultPkName=%0:s_PKC
+DefaultPkIndexName=%0:s_PKI
+DefaultIndexName=%0:s_IX%1:d
+DefaultFkName=%0:s_FK%1:d
+SqlSeparator=0
+UpperCaseKeyword=0
+ShowTag=1
+ShowCommonAttributes=0
+BugFixEntityWidth=1
+
+[Entity]
+PName=healthhy.body_record
+LName=healthhy.body_record
+Comment=
+TableOption=
+Page=Main
+Left=200
+Top=850
+Field="id","id","int(11) auto_increment","NOT NULL",0,"","",$FFFFFFFF,""
+Field="体重","weight","float","NOT NULL",,"","",$FFFFFFFF,""
+Field="体脂肪","body_fat","float","NOT NULL",,"","体脂肪体脂肪体脂肪",$FFFFFFFF,""
+Field="created","created","date","NOT NULL",,"","",$FFFFFFFF,""
+Field="updated","updated","datetime",,,"","",$FFFFFFFF,""
+Field="deleted","deleted","datetime",,,"","",$FFFFFFFF,""
+Field="is_delete","is_delete","tinyint(1)",,,"0","",$FFFFFFFF,""
+Field="user_id","user_id","int(11)","NOT NULL",,"","",$FFFFFFFF,""
+EffectMode=None
+Color=$000000
+BkColor=$FFFFFF
+ModifiedDateTime=20230730201722
+Position="Main",200,850,397,434
+ZOrder=-1
+
+[Entity]
+PName=healthhy.challenge
+LName=healthhy.challenge
+Comment=
+TableOption=
+Page=Main
+Left=100
+Top=350
+Field="id","id","int(11) auto_increment","NOT NULL",0,"","",$FFFFFFFF,""
+Field="title","title","varchar(100)",,,"","",$FFFFFFFF,""
+Field="complete_rate","complete_rate","int(11)",,,"","",$FFFFFFFF,""
+Field="user_id","user_id","int(11)","NOT NULL",,"","",$FFFFFFFF,""
+EffectMode=None
+Color=$000000
+BkColor=$FFFFFF
+ModifiedDateTime=20230730200521
+Position="Main",100,350,545,257
+ZOrder=-2
+
+[Entity]
+PName=healthhy.diary
+LName=healthhy.diary
+Comment=
+TableOption=
+Page=Main
+Left=1400
+Top=1100
+Field="id","id","int(11) auto_increment","NOT NULL",0,"","",$FFFFFFFF,""
+Field="title","title","varchar(255)",,,"","",$FFFFFFFF,""
+Field="content","content","text","NOT NULL",,"","",$FFFFFFFF,""
+Field="created","created","datetime","NOT NULL",,"current_timestamp()","",$FFFFFFFF,""
+Field="id_delete","id_delete","tinyint(1)",,,"0","",$FFFFFFFF,""
+Field="udpated","udpated","datetime",,,"","",$FFFFFFFF,""
+Field="user_id","user_id","int(11) ","NOT NULL",,"","",$FFFFFFFF,""
+EffectMode=None
+Color=$000000
+BkColor=$FFFFFF
+ModifiedDateTime=20230730200817
+Position="Main",1400,1100,278,389
+ZOrder=-3
+
+[Entity]
+PName=healthhy.eat_history
+LName=healthhy.eat_history
+Comment=
+TableOption=
+Page=Main
+Left=1350
+Top=300
+Field="id","id","int(11) auto_increment","NOT NULL",0,"","",$FFFFFFFF,""
+Field="type ","type","int(11)","NOT NULL",,""," 1 : Morning 2: Lunch 3: Dinner 4: Snack",$FFFFFFFF,""
+Field="食事画像","image_path","varchar(255)","NOT NULL",,"","",$FFFFFFFF,""
+Field="備考","remark","text",,,"","",$FFFFFFFF,""
+Field="created","created","datetime",,,"","",$FFFFFFFF,""
+Field="updated","updated","datetime",,,"","",$FFFFFFFF,""
+Field="deleted","deleted","datetime",,,"","",$FFFFFFFF,""
+Field="user_id","user_id","int(11) ","NOT NULL",,"","",$FFFFFFFF,""
+EffectMode=None
+Color=$000000
+BkColor=$FFFFFF
+ModifiedDateTime=20230730200841
+Position="Main",1350,300,429,439
+ZOrder=-4
+
+[Entity]
+PName=healthhy.exercise
+LName=healthhy.exercise
+Comment=
+TableOption=
+Page=Main
+Left=700
+Top=1400
+Field="id","id","int(11) auto_increment","NOT NULL",0,"","",$FFFFFFFF,""
+Field="exercire name","name","varchar(255)","NOT NULL",,"","1. 家事全般（立位・軽い）2. ....3. ....",$FFFFFFFF,""
+Field="消費カロリー","kcal","int(11)","NOT NULL",,"","",$FFFFFFFF,""
+Field="実行時間(分)","time","int(11)","NOT NULL",,"","",$FFFFFFFF,""
+Field="施行日","created","date",,,"","",$FFFFFFFF,""
+Field="is_delete","is_delete","tinyint(1)",,,"0","",$FFFFFFFF,""
+Field="updated","updated","datetime",,,"","",$FFFFFFFF,""
+Field="deleted","deleted","datetime",,,"","",$FFFFFFFF,""
+Field="user_id","user_id","int(11)","NOT NULL",,"","",$FFFFFFFF,""
+EffectMode=None
+Color=$000000
+BkColor=$FFFFFF
+ModifiedDateTime=20230730200752
+Position="Main",700,1400
+ZOrder=-5
+
+[Entity]
+PName=healthhy.m_hashtag
+LName=healthhy.m_hashtag
+Comment=
+TableOption=
+Page=Main
+Left=2250
+Top=1300
+Field="id","id","int(11) auto_increment","NOT NULL",0,"","",$FFFFFFFF,""
+Field="hashtag name","tag_name","varchar(100)","NOT NULL",,"","",$FFFFFFFF,""
+Field="created","created","datetime",,,"current_timestamp()","",$FFFFFFFF,""
+Field="is_deleted","is_deleted","tinyint(1)","NOT NULL",,"0","",$FFFFFFFF,""
+Field="updated","updated","datetime",,,"","",$FFFFFFFF,""
+Field="deleted","deleted","datetime",,,"","",$FFFFFFFF,""
+EffectMode=None
+Color=$000000
+BkColor=$FFFFFF
+Position="Main",2250,1300
+ZOrder=-6
+
+[Entity]
+PName=healthhy.recommended
+LName=healthhy.コラムページ
+Comment=
+TableOption=
+Page=Main
+Left=2200
+Top=350
+Field="id","id","int(10) unsigned auto_increment","NOT NULL",0,"","",$FFFFFFFF,""
+Field="recommended type ","type","int(11)","NOT NULL",,"","1 : オススメ2: ダイエット3: 美容4: 健康",$FFFFFFFF,""
+Field="文書の概要","title","varchar(255)","NOT NULL",,"","",$FFFFFFFF,""
+Field="image_path","image_path","varchar(255)",,,"","",$FFFFFFFF,""
+Field="content","content","text",,,"","",$FFFFFFFF,""
+Field="created","created","datetime","NOT NULL",,"current_timestamp()","",$FFFFFFFF,""
+Field="is_delete","is_delete","tinyint(1)","NOT NULL",,"0","",$FFFFFFFF,""
+Field="updated","updated","datetime",,,"","",$FFFFFFFF,""
+Field="deleted","deleted","datetime",,,"","",$FFFFFFFF,""
+EffectMode=None
+Color=$000000
+BkColor=$FFFFFF
+ModifiedDateTime=20230730201222
+Position="Main",2200,350
+ZOrder=-7
+
+[Entity]
+PName=healthhy.recommended_tag
+LName=healthhy.recommended_tag
+Comment=
+TableOption=
+Page=Main
+Left=1850
+Top=1000
+Field="recommended_id","recommended_id","int(11)","NOT NULL",0,"","",$FFFFFFFF,""
+Field="tag_id","tag_id","int(11)","NOT NULL",1,"","",$FFFFFFFF,""
+EffectMode=None
+Color=$000000
+BkColor=$FFFFFF
+Position="Main",1850,1000
+ZOrder=-8
+
+[Entity]
+PName=healthhy.users
+LName=healthhy.users
+Comment=
+TableOption=
+Page=Main
+Left=850
+Top=750
+Field="id","id","int(11) auto_increment","NOT NULL",0,"","",$FFFFFFFF,""
+Field="name","name","varchar(100)","NOT NULL",,"","",$FFFFFFFF,""
+Field="email","email","varchar(255)","NOT NULL",,"","",$FFFFFFFF,""
+Field="password","password","varchar(255)","NOT NULL",,"","",$FFFFFFFF,""
+Field="created","created","datetime",,,"","",$FFFFFFFF,""
+Field="updated","updated","datetime",,,"","",$FFFFFFFF,""
+Field="permision","permision","int(11)",,,"2","2. generer user",$FFFFFFFF,""
+Index=users_UN=2,email
+EffectMode=None
+Color=$000000
+BkColor=$FFFFFF
+ModifiedDateTime=20230730200650
+Position="Main",850,750,344,405
+ZOrder=-9
+
+[Relation]
+Entity1=healthhy.users
+Entity2=healthhy.challenge
+RelationType1=2
+RelationType2=3
+Fields1=id
+Fields2=user_id
+Cardinarity1=
+Cardinarity2=
+Position="MAIN",0,1247,8753,6887,R,R,""
+Dependence=0
+Caption=
+PName=
+ModifiedDateTime=20230730201048
+LineMode=0
+Bar1=125
+Bar2=875
+Bar3=689
+TermPos1=R
+TermPos2=R
+ZOrder=1
+
+[Relation]
+Entity1=healthhy.users
+Entity2=healthhy.eat_history
+RelationType1=2
+RelationType2=3
+Fields1=id
+Fields2=user_id
+Cardinarity1=
+Cardinarity2=
+Position="MAIN",0,1710,8290,3321,R,R,""
+Dependence=0
+Caption=
+PName=
+ModifiedDateTime=20230730201058
+LineMode=0
+Bar1=171
+Bar2=829
+Bar3=332
+TermPos1=R
+TermPos2=R
+ZOrder=2
+
+[Relation]
+Entity1=healthhy.users
+Entity2=healthhy.diary
+RelationType1=2
+RelationType2=3
+Fields1=id
+Fields2=user_id
+Cardinarity1=
+Cardinarity2=
+Position="MAIN",0,4573,5427,3321,R,R,""
+Dependence=0
+Caption=
+PName=
+ModifiedDateTime=20230730201102
+LineMode=0
+Bar1=457
+Bar2=543
+Bar3=332
+TermPos1=R
+TermPos2=R
+ZOrder=3
+
+[Relation]
+Entity1=healthhy.users
+Entity2=healthhy.exercise
+RelationType1=2
+RelationType2=3
+Fields1=id
+Fields2=user_id
+Cardinarity1=
+Cardinarity2=
+Position="MAIN",0,2106,7429,2514,R,R,""
+Dependence=0
+Caption=
+PName=
+ModifiedDateTime=20230730201107
+LineMode=0
+Bar1=211
+Bar2=743
+Bar3=251
+TermPos1=R
+TermPos2=R
+ZOrder=4
+
+[Relation]
+Entity1=healthhy.users
+Entity2=healthhy.body_record
+RelationType1=2
+RelationType2=3
+Fields1=id
+Fields2=user_id
+Cardinarity1=
+Cardinarity2=
+Position="MAIN",0,3682,6182,3321,R,R,""
+Dependence=0
+Caption=
+PName=
+ModifiedDateTime=20230730201041
+LineMode=0
+Bar1=368
+Bar2=618
+Bar3=332
+TermPos1=R
+TermPos2=R
+ZOrder=5
+
+[Relation]
+Entity1=healthhy.recommended
+Entity2=healthhy.recommended_tag
+RelationType1=2
+RelationType2=3
+Fields1=id
+Fields2=recommended_id
+Cardinarity1=
+Cardinarity2=
+Position="MAIN",0,5111,4889,5923,R,R,""
+Dependence=0
+Caption=
+PName=
+ModifiedDateTime=20230730201125
+LineMode=0
+Bar1=511
+Bar2=489
+Bar3=592
+TermPos1=R
+TermPos2=R
+ZOrder=6
+
+[Relation]
+Entity1=healthhy.m_hashtag
+Entity2=healthhy.recommended_tag
+RelationType1=2
+RelationType2=3
+Fields1=id
+Fields2=tag_id
+Cardinarity1=
+Cardinarity2=
+Position="MAIN",0,5111,4889,5797,R,R,""
+Dependence=0
+Caption=
+PName=
+ModifiedDateTime=20230730201136
+LineMode=0
+Bar1=511
+Bar2=489
+Bar3=580
+TermPos1=R
+TermPos2=R
+ZOrder=7

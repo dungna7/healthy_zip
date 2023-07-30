@@ -1,0 +1,196 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+		<title>Table&#32;Definition&#32;Document</title>
+		<link rel="stylesheet" href="a5m2.css">
+	</head>
+	<body>
+	<table border="1">
+		<caption>Entity info</caption>
+			<colgroup>
+				<col width="115">
+				<col width="180">
+				<col width="115">
+				<col width="180">
+			</colgroup>
+			<th>System Name</th>
+			<td>&nbsp;</td>
+			<th>Author</th>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<th>Sub-system Name</th>
+			<td>&nbsp;</td>
+			<th>Created On</th>
+			<td>2023/07/30&nbsp;</td>
+		</tr>
+		<tr>
+			<th>Schema Name</th>
+			<td>&nbsp;</td>
+			<th>Modified On</th>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<th>Logical Entity Name</th>
+			<td>healthhy.m_hashtag&nbsp;</td>
+			<th>Tag&nbsp;</th>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<th>Physical Entity Name</th>
+			<td>healthhy.m_hashtag&nbsp;</td>
+			<th>&nbsp;</th>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="4"><b>Remark</b><br></td>
+		</tr>
+	</table>
+
+<br>
+<br>
+	<table border="1">
+		<caption>Column info</caption>
+			<colgroup>
+				<col width="30">
+				<col width="120">
+				<col width="120">
+				<col width="100">
+				<col width="60">
+				<col width="60">
+				<col width="100">
+			</colgroup>
+		<tr>
+			<th>No</th>
+			<th>Logical Name</th>
+			<th>Physical Name</th>
+			<th>Data Type</th>
+			<th>Not Null</th>
+			<th>Default</th>
+			<th>Remark</th>
+		</tr>
+		<tr>
+			<td style="text-align:right;">1</td>
+			<td>id</td>
+			<td>id</td>
+			<td>int(11)&#32;auto_increment</td>
+			<td>Yes (PK)</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">2</td>
+			<td>hashtag&#32;name</td>
+			<td>tag_name</td>
+			<td>varchar(100)</td>
+			<td>Yes</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">3</td>
+			<td>created</td>
+			<td>created</td>
+			<td>datetime</td>
+			<td>&nbsp;</td>
+			<td>current_timestamp()</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">4</td>
+			<td>is_deleted</td>
+			<td>is_deleted</td>
+			<td>tinyint(1)</td>
+			<td>Yes</td>
+			<td>0</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">5</td>
+			<td>updated</td>
+			<td>updated</td>
+			<td>datetime</td>
+			<td>&nbsp;</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">6</td>
+			<td>deleted</td>
+			<td>deleted</td>
+			<td>datetime</td>
+			<td>&nbsp;</td>
+			<td></td>
+			<td></td>
+		</tr>
+	</table>
+
+<br>
+<br>
+	<table border="1">
+		<caption>Index info</caption>
+			<colgroup>
+				<col width="30">
+				<col width="170">
+				<col width="230">
+				<col width="60">
+				<col width="100">
+			</colgroup>
+		<tr>
+			<th>No</th>
+			<th>Index Name</th>
+			<th>Column List</th>
+			<th>Unique</th>
+			<th>Option</th>
+		</tr>
+	</table>
+
+<br>
+<br>
+	<table border="1">
+		<caption>Relationship info</caption>
+			<colgroup>
+				<col width="30">
+				<col width="120">
+				<col width="160">
+				<col width="120">
+				<col width="160">
+			</colgroup>
+			<th>No</th>
+			<th>Verb</th>
+			<th>Column List</th>
+			<th>Reference Source</th>
+			<th>Reference Column List</th>
+		</tr>
+	</table>
+
+<br>
+<br>
+	<table border="1">
+		<caption>Relationship info (PK Side)</caption>
+			<colgroup>
+				<col width="30">
+				<col width="120">
+				<col width="160">
+				<col width="120">
+				<col width="160">
+			</colgroup>
+		<tr>
+			<th>No</th>
+			<th>Verb</th>
+			<th>Column List</th>
+			<th>Reference Source</th>
+			<th>Reference Source Column List</th>
+		</tr>
+		<tr>
+			<td style="text-align:right;">1</td>
+			<td></td>
+			<td>id</td>
+			<td>healthhy.recommended_tag</td>
+			<td>tag_id</td>
+		</tr>
+	</table>
+
+
+	</body>
